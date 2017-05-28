@@ -144,7 +144,7 @@ ul {
   -webkit-justify-content: space-around;
   /* Safari */
   justify-content: space-around;
-  margin: 37px 0 0 0;
+  margin: 44px 0 0 0;
 }
 @media screen and (min-width: 1170px) {
   .main {

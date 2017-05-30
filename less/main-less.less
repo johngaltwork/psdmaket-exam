@@ -184,7 +184,7 @@ ul {
     margin: 44px 0 0 0;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1190px) {
     .main {
         -webkit-justify-content: space-between; /* Safari */
         justify-content: space-between;
@@ -198,7 +198,7 @@ ul {
     background: @main-item_bg_color url(../img/default-photo.png) no-repeat center center;
     border-bottom: solid 3px @main-item_border_color;
     border-radius: 6px;
-    margin: 0 0 37px 0;
+    margin: 0 10px 37px 0;
 }
 
 .display-item {
@@ -270,11 +270,9 @@ ul {
 
 /*footer*/
 .footer {
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    -webkit-justify-content: center; /* Safari */
-    justify-content: center;
-    margin: 30px 0 62px 0;
+
+    margin: 25px 0 57px 0;
+    text-align: center;
 }
 
 .footer-items {
@@ -303,23 +301,29 @@ ul {
     height: 40px;
     transition: background-color .3s, border-bottom .3s;
     z-index: 5;
+    margin: 5px 0 5px 0;
 }
 
 .footer-items li:nth-child(4),
 .footer-items li:nth-child(5),
 .footer-items li:nth-child(6),
 .footer-items li:nth-child(8),
-.footer-items li:nth-child(9), {
+.footer-items li:nth-child(9),
+.footer-items li:nth-child(10) {
     display: none;
 }
-
+@media screen and (min-width: 410px) {
+    .footer-items li:nth-child(10) {
+        display: block;
+    }
+}
 @media screen and (min-width: 800px) {
     .footer-items li:nth-child(4),
     .footer-items li:nth-child(5),
     .footer-items li:nth-child(6),
     .footer-items li:nth-child(8),
     .footer-items li:nth-child(9), {
-    display: block;
+        display: block;
     }
 }
 
@@ -362,10 +366,29 @@ ul {
 }
 
 @keyframes turn {
-  to {
-    transform: rotateX(360deg);
-  }
+    to {
+        transform: rotateX(360deg);
+    }
 }
 
+.footer-items li:first-child:hover {
+    animation: myanime1 .3s alternate infinite;
+}
+
+@keyframes myanime1 {
+    to {
+        transform: translateX(-5px);
+    }
+}
+
+.footer-items li:last-child:hover {
+    animation: myanime .3s alternate infinite;
+}
+
+@keyframes myanime {
+    to {
+        transform: translateX(5px);
+    }
+}
 /*footer*/
 
